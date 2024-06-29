@@ -25,6 +25,9 @@ Comando para exportar o banco de dados através do terminal.
 
 ```curl https://[ADICIONE-AQUI-O-PROJECTID-DO-SANITY.IO].api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson```
 
+Exemplo: curl https://sc0ziy2k.api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson
+
+
 
 ## IMAGEM DO PROJETO: CLIENTE
 
@@ -46,7 +49,6 @@ OBS: SERÁ NECESSÁRIO FAZER UM CADASTRO NO SANITY.io
 
 ![Captura de tela de 2024-06-29 13-21-26](https://github.com/raldineyr/algorithms-and-data-structures/assets/64384382/30d31af5-59ef-4167-b81b-3d1e76b1c03d)
 
-Exemplo: curl https://sc0ziy2k.api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson
 
 
 
