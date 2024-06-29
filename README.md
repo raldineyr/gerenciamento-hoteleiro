@@ -16,7 +16,7 @@ terceiro, é necessário usar um dos comandos abaixo de acordo com o gerenciador
 ```
 Quarto, abra o seguinte link do localhost padrão: [http://localhost:3000](http://localhost:3000) 
 
-Caso haja um erro semelhante ao informado abaixo é porque o arquivo `.env` não está configurado, favor o configurar ou verificar se não foi disponibilizado, no caso do SENAI, no AVA especificamente na entrega: AV6 - Prototipar a solução.
+Caso haja um erro semelhante ao informado abaixo é porque o arquivo `.env` não está configurado, favor o configurar ou no caso do SENAI verificar se não foi disponibilizado no AVA especificamente na entrega: AV6 - Prototipar a solução. 
 
 ![Captura de tela de 2024-06-29 12-05-12](https://github.com/raldineyr/BACK-END/assets/64384382/4ad201b1-470a-48d6-8c9d-6f8f5cb35fa5)
 
