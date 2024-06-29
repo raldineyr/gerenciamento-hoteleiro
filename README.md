@@ -23,7 +23,7 @@ Caso haja um erro semelhante ao informado abaixo é porque o arquivo `.env` não
 ## EXPORTAR BANCO DE DADOS
 Comando para exportar o banco de dados através do terminal.
 
-```curl https://sc0ziy2k.api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson```
+```curl https://[ADICIONE-AQUI-O-PROJECTID-DO-SANITY.IO].api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson```
 
 
 ## IMAGEM DO PROJETO: CLIENTE
