@@ -20,10 +20,10 @@ Caso haja um erro semelhante ao informado abaixo é porque o arquivo `.env` não
 
 ![Captura de tela de 2024-06-29 12-05-12](https://github.com/raldineyr/BACK-END/assets/64384382/4ad201b1-470a-48d6-8c9d-6f8f5cb35fa5)
 
-##EXPORTAR BANCO DE DADOS
-Comando para exportar o banco de dados:
+## EXPORTAR BANCO DE DADOS
+Comando para exportar o banco de dados através do terminal.
 
-curl https://sc0ziy2k.api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson
+```curl https://sc0ziy2k.api.sanity.io/v2021-06-07/data/export/production?types=account,booking,hotelRoom,index,review,user,verificationToken > backup.ndjson```
 
 
 ## IMAGEM DO PROJETO: CLIENTE
