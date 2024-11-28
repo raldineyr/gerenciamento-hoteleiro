@@ -99,6 +99,12 @@ const Auth = () => {
             onChange={handleInputChange}
           />
           <input
+            type='phone'
+            name='Phone number'
+            placeholder='+55 11 98765-4321'
+            className={inputStyles}
+          />
+          <input
             type='password'
             name='password'
             placeholder='password'
@@ -116,13 +122,17 @@ const Auth = () => {
             Sign Up
           </button>
         </form>
-
-        <button onClick={loginHandler} className='text-blue-700 underline'>
-          login
-        </button>
+        <button 
+  onClick={loginHandler} 
+  style={{ backgroundColor: 'green', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+>
+  Login
+</button>
+        
       </div>
     </section>
   );
 };
 
 export default Auth;
+
