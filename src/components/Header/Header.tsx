@@ -8,28 +8,34 @@ import ThemeContext from '@/context/themeContext';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 
-
 const Header = () => {
     const { darkTheme, setDarkTheme } = useContext(ThemeContext);
     const { data: session } = useSession();
     console.log(session);
 
+    const handleScrollToFooter = (event: { preventDefault: () => void; }) => {
+        event.preventDefault();
+        const footerElement = document.querySelector('footer');
+        footerElement?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <header className="py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between">
             <div className="flex items-center w-full md:2/3">
                 <a className="font-black text-tertiary-light" href="http://localhost:3000/">
-                    <img src="/resources/logo-pousada-quinta-do-ypua.png" alt="" className="h-12 md:h-16" />
+                    <img src="/images/logo-pousada-quinta-do-ypua.png" alt="" className="h-12 md:h-16" />
                 </a>
             </div>
-            <ul className="flex intems-center justify-between w-full md:w1/3 mt-4">
+            <ul className="flex items-center justify-between w-full md:w1/3 mt-4">
                 <li className='hover:-translate-y-2 duration-500 transition-all'>
-                    <Link href="/">InÍcio</Link>
+                    <Link href="/">Início</Link>
                 </li>
                 <li className='hover:-translate-y-2 duration-500 transition-all'>
                     <Link href="/rooms">Acomodações</Link>
                 </li>
                 <li className='hover:-translate-y-2 duration-500 transition-all'>
-                    <Link href="/">Contato</Link>
+                    {/* Adicionando evento para mover ao rodapé */}
+                    <a href="#footer" onClick={handleScrollToFooter}>Contato</a>
                 </li>
                 <ul className='flex items-center ml-5'>
                     <li className='flex items-center'>
@@ -42,11 +48,9 @@ const Header = () => {
                                             alt={session.user.name!}
                                             width={40}
                                             height={40}
-                                          //  className='scale-animation img'
                                             className='scale-animation img'
                                         />
                                     </div>
-
                                 ) : (
                                     <FaUserCircle className='cursor-pointer' />
                                 )}
