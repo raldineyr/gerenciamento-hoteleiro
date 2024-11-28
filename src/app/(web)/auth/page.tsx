@@ -134,6 +134,5 @@ const Auth = () => {
     </section>
   );
 };
-
 export default Auth;
 
