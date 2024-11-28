@@ -30,7 +30,7 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
     );
   };
 
-  const maximumVisiblePhotos = 4;
+  const maximumVisiblePhotos = 6;
   const totalPhotos = photos.length;
   const displayPhotos = photos.slice(1, maximumVisiblePhotos - 1);
   const remainingPhotosCount = totalPhotos - maximumVisiblePhotos;
@@ -44,8 +44,18 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
               src={photos[0].url}
               alt={`Room Photo ${currenPhotoIndex + 1}`}
               className='img scale-animation cursor-pointer'
-              width={150}
-              height={150}
+              width={1000}
+              height={1000}
+              onClick={openModal.bind(this, 0)}
+            />
+          </div>
+          <div className='hidden md:flex justify-center items-center w-full h-full'>
+            <Image
+              src={photos[0].url}
+              alt={`Room Photo ${currenPhotoIndex + 1}`}
+              className='img scale-animation cursor-pointer'
+              width={1000}
+              height={1000}
               onClick={openModal.bind(this, 0)}
             />
           </div>
@@ -54,8 +64,8 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
               src={photos[currenPhotoIndex].url}
               alt={`Room Photo ${currenPhotoIndex + 1}`}
               className='img'
-              width={150}
-              height={150}
+              width={1000}
+              height={1000}
               onClick={openModal.bind(this, 0)}
             />
           </div>
@@ -69,7 +79,6 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
             {currenPhotoIndex + 1} / {photos.length}
           </span>
         </div>
-
         <div className='hidden md:grid grid-cols-2 h-full gap-5'>
           {displayPhotos.map((photo, index) => (
             <div
@@ -77,10 +86,10 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
               className='cursor-pointer h-64 rounded-2xl overflow-hidden'
             >
               <Image
-                width={150}
-                height={150}
+              width={1000}
+              height={1000}
                 src={photo.url}
-                alt={`Fotos da acomodação ${index + 2}`}
+                alt={`Room Photo ${index + 2}`}
                 className='img scale-animation'
               />
             </div>
@@ -91,10 +100,10 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
               onClick={openModal.bind(this, maximumVisiblePhotos)}
             >
               <Image
-                width={150}
-                height={150}
+              width={1000}
+              height={1000}
                 src={photos[maximumVisiblePhotos - 1].url}
-                alt={`Fotos da acomodação ${maximumVisiblePhotos}`}
+                alt={`Room Photo ${maximumVisiblePhotos}`}
                 className='img'
               />
               <div className='absolute cursor-pointer text-white inset-0 flex justify-center bg-[rgba(0,0,0,0.5)] items-center text-2xl'>
@@ -109,9 +118,9 @@ const HotelPhotoGallery: FC<{ photos: ImageType[] }> = ({ photos }) => {
             <div className='h-[75vh] w-[320px] md:w-[700px] relative'>
               <Image
                 src={photos[currenPhotoIndex].url}
-                alt={`Fotos da acomodação ${currenPhotoIndex + 1}`}
-                width={150}
-                height={150}
+                alt={`Room Photo ${currenPhotoIndex + 1}`}
+                width={1000}
+                height={1000}
                 className='img'
               />
               <div className='flex justify-between items-center py-3'>
