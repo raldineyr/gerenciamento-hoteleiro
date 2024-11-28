@@ -102,6 +102,7 @@ const Auth = () => {
             type='phone'
             name='Phone number'
             placeholder='+55 11 98765-4321'
+            required
             className={inputStyles}
           />
           <input
